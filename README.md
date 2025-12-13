@@ -127,7 +127,7 @@ Use the scripts in `Inference_Code/` to run inference with the fine-tuned models
 |--------|-------------|
 | `scripts/scrape_ghanaian_law.py` | Generates the comprehensive Ghanaian law dataset |
 | `scripts/upload_to_huggingface.py` | Uploads the dataset to Hugging Face Hub |
-| `scripts/datasetformatter .py` | Formats datasets for training |
+| `scripts/datasetformatter.py` | Formats datasets for training |
 
 ## Fine Tuning Process
 

@@ -67,7 +67,8 @@ Each entry contains:
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("your-username/Ghanaian_Law_QA")
+# Replace YOUR_USERNAME with your Hugging Face username
+dataset = load_dataset("YOUR_USERNAME/Ghanaian_Law_QA")
 ```
 
 ## Citation
@@ -125,10 +126,10 @@ def prepare_dataset(data_dir: str) -> Dataset:
     
     print(f"Unique entries after deduplication: {len(unique_data)}")
     
-    # Create dataset
+    # Create dataset with safe key access
     dataset = Dataset.from_dict({
-        "question": [d["question"] for d in unique_data],
-        "answer": [d["answer"] for d in unique_data]
+        "question": [d.get("question", "") for d in unique_data],
+        "answer": [d.get("answer", "") for d in unique_data]
     })
     
     return dataset
