@@ -15,7 +15,7 @@ First, run the cells below to install the requirements:
 
 !pip install -Uqqq pip --progress-bar off
 !pip install -qqq bitsandbytes==0.39.0
-!pip install -qqq torch--2.0.1 --progress-bar off
+!pip install -qqq torch==2.0.1 --progress-bar off
 !pip install -qqq -U git+https://github.com/huggingface/transformers.git@e03a9cc --progress-bar off
 !pip install -qqq -U git+https://github.com/huggingface/peft.git@42a184f --progress-bar off
 !pip install -qqq -U git+https://github.com/huggingface/accelerate.git@c9fbb71 --progress-bar off
@@ -151,8 +151,6 @@ print(generate_response(prompt))
 
 prompt = "Write a legal memo on the protection of fundamental human rights under Chapter 5 of the 1992 Constitution of Ghana."
 print(generate_response(prompt))
-
-prompt
 
 prompt = "Explain the concept of 'Separation of Powers' in the 1992 Constitution of Ghana"
 print(generate_response(prompt))
